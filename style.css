@@ -1,5 +1,8 @@
 .map-section {
-  padding: 0 30px 40px;
+  padding: 40px 30px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .map-section h3 {
@@ -21,8 +24,10 @@
 }
 
 body {
+  min-height: 100vh;
   background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
   color: #fff;
+  overflow-x: hidden;
 }
 
 .header {
@@ -33,10 +38,12 @@ body {
 }
 
 .hero {
-  padding: 40px 30px;
+  padding: 40px 30px 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text h2 {
@@ -212,5 +219,16 @@ body {
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
+    padding-bottom: 80px;
   }
+
+  .card {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .map-section {
+    padding-top: 60px;
+  }
+}
 }
