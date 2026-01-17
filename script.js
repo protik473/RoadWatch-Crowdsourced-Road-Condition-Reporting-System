@@ -1,4 +1,14 @@
 let reports = [];
+let map;
+let markers = [];
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 28.6139, lng: 77.2090 },
+    zoom: 12,
+  });
+}
+
 
 function submitReport() {
   const image = document.getElementById("imageInput").value;
@@ -9,16 +19,35 @@ function submitReport() {
     return;
   }
 
+    // Fake AI Severity Detection
+  const aiSeverity = fakeAIScan();
+
   const report = {
     id: Date.now(),
-    severity,
+    severity: aiSeverity,
     status: "Reported",
   };
 
+    addMarker();
   reports.unshift(report);
   renderReports();
 
   document.getElementById("imageInput").value = "";
+}
+
+function fakeAIScan() {
+  const levels = ["Low", "Medium", "High"];
+  return levels[Math.floor(Math.random() * levels.length)];
+}
+
+function addMarker() {
+  if (!map) return;
+  const position = {
+    lat: 28.6 + Math.random() * 0.05,
+    lng: 77.2 + Math.random() * 0.05,
+  };
+  const marker = new google.maps.Marker({ position, map });
+  markers.push(marker);
 }
 
 function renderReports() {
