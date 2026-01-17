@@ -63,13 +63,16 @@ body {
 }
 
 .card {
-  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  max-width: 420px;
+  min-height: 360px;
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
   color: #0f172a;
-  padding: 28px;
-  border-radius: 24px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
-  position: relative;
-  overflow: hidden;
+  padding: 32px;
+  border-radius: 26px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card::before {
@@ -91,14 +94,40 @@ body {
   margin-bottom: 18px;
 }
 
-.card input,
 .card select {
   width: 100%;
   margin-top: 8px;
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
   border: 1px solid #e5e7eb;
   background: #fff;
+  font-size: 0.95rem;
+}
+
+.file-label span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.file-box {
+  margin-top: 10px;
+  padding: 18px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.file-box:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+.file-box span {
+  font-size: 0.9rem;
+  color: #334155;
 }
 
 .card input:focus,
