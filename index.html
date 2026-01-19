@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoadWatch – Smart City Road Monitoring</title>
+  <link rel="stylesheet" href="frontend/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <h3>🚨 Report a Pothole Now</h3>
+  <p class="cta-sub">⚡ Takes less than 10 seconds</p>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Report <span>Road Issues.</span><br />Make Cities Safer.</h2>
+    <p>RoadWatch <span>empowers citizens</span> to report potholes using photos and GPS.</p>
+  </div>
+
+  <div class="card">
+    <h3>Report a Road Issue</h3>
+
+    <!-- IMAGE UPLOAD -->
+    <label class="file-label">
+      Upload Image
+      <div class="file-box" id="fileBox">
+        <span id="fileText">Click to upload image</span>
+      </div>
+      <input type="file" id="imageInput" hidden />
+    </label>
+
+    <!-- SEVERITY -->
+    <label>
+      Severity Level
+      <div class="severity-group">
+        <div class="sev low" data-level="Low">🟢 Low</div>
+        <div class="sev medium active" data-level="Medium">🟡 Medium</div>
+        <div class="sev high" data-level="High">🔴 High</div>
+      </div>
+      <input type="hidden" id="severity" value="Medium" />
+    </label>
+
+    <button id="submitBtn">Submit Report</button>
+    <p class="gps-proof">📍 Location captured automatically</p>
+    <img id="previewImage" />
+  </div>
+</section>
+<section class="map-section">
+  <h3>📍 Live Issue Map</h3>
+  <div id="map"></div>
+</section>
+
+<section class="reports">
+  
+  <h3>Live Reports</h3>
+  <p id="emptyText">No reports yet.</p>
+  <div id="reportList" class="report-grid"></div>
+  <h3>🛠 Admin Panel (Demo)</h3>
+  <div id="adminList"></div>
+
+</section>
+
+<script src="frontend/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"  async  defer></script>
+
+</body>
+</html>
