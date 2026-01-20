@@ -6,14 +6,47 @@
 }
 
 body {
-  background: linear-gradient(135deg, #202d4c, #071242);
+  background: linear-gradient(135deg, #0f172a, #020617);
   color: #fff;
 }
 
 .header {
   padding: 20px 30px;
 }
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(10px);
+}
 
+.logo {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #60a5fa;
+}
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -255,6 +288,47 @@ button:hover {
 #adminList button:hover {
   opacity: 0.85;
 }
+.footer {
+  margin-top: 80px;
+  padding: 50px 30px 20px;
+  background: #020617;
+  color: #cbd5f5;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer h5 {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.footer a {
+  display: block;
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.footer a:hover {
+  color: #60a5fa;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #64748b;
+}
 
 
 @media (max-width: 480px) {
@@ -285,5 +359,10 @@ button:hover {
 
   #adminList button {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
   }
 }
