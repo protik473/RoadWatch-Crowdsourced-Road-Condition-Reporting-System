@@ -8,10 +8,19 @@
 </head>
 <body>
 
-<header class="header">
-  <h3>🚨 Report a Pothole Now</h3>
-  <p class="cta-sub">⚡ Takes less than 10 seconds</p>
+<header class="nav">
+  <div class="nav-left">
+    <span class="logo">🚧 RoadWatch</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="#report">Report</a>
+    <a href="#map">Live Map</a>
+    <a href="#reports">Reports</a>
+    <a href="#admin">Admin</a>
+  </nav>
 </header>
+
 
 <section class="hero">
   <div class="hero-text">
@@ -61,6 +70,31 @@
   <div id="adminList"></div>
 
 </section>
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>🚧 RoadWatch</h4>
+      <p>Crowdsourced road issue reporting for smarter cities.</p>
+    </div>
+
+    <div>
+      <h5>Product</h5>
+      <a href="#">Report Issue</a>
+      <a href="#">Live Map</a>
+      <a href="#">Admin Panel</a>
+    </div>
+
+    <div>
+      <h5>Hackathon Demo</h5>
+      <p>Built with ❤️ using HTML, CSS, JS</p>
+      <p>Google Maps API • Node.js (planned)</p>
+    </div>
+  </div>
+
+  <p class="footer-bottom">
+    © 2026 RoadWatch • Smart City Prototype
+  </p>
+</footer>
 
 <script src="frontend/script.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"  async  defer></script>
